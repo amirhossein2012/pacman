@@ -4,10 +4,10 @@ using UnityEngine;
 using System;
 
 public class MapGenerator  {
-    int row, col,wall_density;
-    int[,] map;
+    static int row, col,wall_density;
+    static int[,] map;
     static System.Random rnd ;
-    MapGenerator()
+    public static  void generate()
     {
         row = GameData.row;
         col = GameData.col;
@@ -17,7 +17,7 @@ public class MapGenerator  {
         randomMap();
         updateData();
     }
-    void randomMap()
+    static void randomMap()
     {
         for(int i=0;i< row;i++)
         {
@@ -38,13 +38,13 @@ public class MapGenerator  {
             }
         }
     }
-    bool isValid()
+    static bool isValid()
     {
         //check if wall is ok or not
         return true;
     }
 
-    void updateData()
+    static void updateData()
     {
         for (int i = 0; i < row; i++)
         {

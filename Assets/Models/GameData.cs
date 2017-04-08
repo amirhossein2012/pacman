@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameData : MonoBehaviour {
+public class GameData  {
     //Game database
     public static int row, col, square_size, wall_density;
     public static int[,] map;
-    public void initiate()
+    public static void initiate()
     {
         row = GameModelLoader.row;
         col = GameModelLoader.col;
@@ -21,11 +21,11 @@ public class GameData : MonoBehaviour {
             }
         }
     }
-	void Start () {
-
+    static GameData()
+    {
         initiate();
+    }
 
-	}
 	
 	
 }
