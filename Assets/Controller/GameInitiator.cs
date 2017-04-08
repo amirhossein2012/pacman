@@ -13,6 +13,6 @@ public class GameInitiator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		dsafasdfasdf
 	}
 }
