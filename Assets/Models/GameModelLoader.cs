@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Xml;
-public class GameModelLoader : MonoBehaviour {
+public class GameModelLoader{
 
     //Get data from xml file
-    static int row,col,square_size,wall_density;
-    void Start()
-    {
+    public static int row,col,square_size,wall_density;
+    static GameModelLoader() { 
         XmlDocument doc = new XmlDocument();
         doc.Load("Assets\\Models\\GameModel.xml");
 
