@@ -22,10 +22,8 @@ public class GameData : MonoBehaviour {
         }
     }
 	void Start () {
-       
-       
+
         initiate();
-        
 
 	}
 	
